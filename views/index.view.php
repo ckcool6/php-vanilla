@@ -1,13 +1,7 @@
 <?php require 'partials/head.php'; ?>
-
-<div>
-	<h1>submit your name</h1>
-
-	<form action="/test/names" method="POST">
-		<input type="text" name="name">
-		<button type="submit">submit</button>
-	</form>
-</div>
+<br/>
+<br/>
+<br/>
 
 <ul>
 	<?php foreach ($tasks as $task): ?>
@@ -20,5 +14,14 @@
 		</li>
 	<?php endforeach ?>
 </ul>
+
+<br/>
+<div class="submit">
+	<p>submit your todos:</p>
+	<form action="/test/names" method="POST">
+		<input type="text" name="name">
+		<button type="submit">submit</button>
+	</form>
+</div>
 
 <?php require 'partials/foot.php'; ?>
