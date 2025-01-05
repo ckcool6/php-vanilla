@@ -1,10 +1,15 @@
 <?php 
-require 'core/database/connection.php';
-require 'core/database/QueryBuild.php';
+$app = [];
+
+$app['config'] = require 'config.php';
+
 require 'core/Router.php';
-$config = require 'config.php';
+require 'core/Request.php';
+require 'core/database/Connection.php';
+require 'core/database/QueryBuild.php';
 
 
-return new QueryBuild(
-    Connection::make($config['database'])
+
+$app['database'] = new QueryBuild(
+    Connection::make($app['config']['database'])
 );
